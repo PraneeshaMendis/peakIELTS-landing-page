@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: "Monthly Plan",
-    subtitle: "Most Popular",
+    subtitle: "Good Start",
     price: "$15",
     period: "/month",
     features: [
@@ -29,11 +29,11 @@ const plans = [
       "Progress graphs",
     ],
     cta: "Choose Plan",
-    highlight: true,
+    highlight: false,
   },
   {
     name: "Pro Plan",
-    subtitle: "Best Value",
+    subtitle: "Most Popular",
     price: "$25",
     period: "/month",
     features: [
@@ -43,6 +43,21 @@ const plans = [
       "Deep analytics",
     ],
     cta: "Upgrade to Pro",
+    highlight: true,
+  },
+  {
+    name: "Elite Plan",
+    subtitle: "Best Value",
+    price: "$40",
+    period: "/month",
+    features: [
+      "12 tests/day",
+      "Live practice session with AI Tutor",
+      "Personalized study plan",
+      "Advanced feedback reports",
+      "Priority support",
+    ],
+    cta: "Get Elite",
     highlight: false,
   },
   {
@@ -130,8 +145,8 @@ const PricingSection = () => {
               <Button
                 className={`w-full ${
                   plan.highlight
-                    ? "neon-glow-cyan bg-primary/20 hover:bg-primary/30"
-                    : "bg-card/50 hover:bg-card/70"
+                    ? "neon-glow-cyan bg-primary/20 hover:bg-primary/30 text-neon-cyan"
+                    : "bg-card/50 hover:bg-card/70 text-foreground"
                 } border border-border font-light`}
                 size="lg"
               >

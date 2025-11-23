@@ -1,69 +1,73 @@
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
-  const links = [
-    { name: "About", href: "#" },
-    { name: "FAQs", href: "#" },
-    { name: "Contact", href: "#" },
-    { name: "Privacy", href: "/privacy" },
-    { name: "Terms", href: "/terms" },
-    { name: "Start Test", href: "#" },
-  ];
-
-  const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+  const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Terms & Conditions", href: "/terms" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Refund Policy", href: "/refund" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
     <footer className="relative border-t border-border/30 px-4 py-16">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-12 flex flex-col items-center justify-between gap-8 md:flex-row">
-          <div className="text-center md:text-left">
+        <div className="mb-12 grid gap-12 md:grid-cols-3">
+          {/* Brand Section */}
+          <div>
             <h3 className="mb-2 text-2xl font-thin text-foreground">
-              Peak<span className="text-neon-cyan">IELTS</span>
+              PeakIELTS
             </h3>
             <p className="text-sm text-muted-foreground">
-              AI-Powered IELTS Speaking Tutor
+              AI-Powered IELTS Speaking Practice
             </p>
           </div>
 
-          <nav className="flex flex-wrap justify-center gap-6">
-            {links.map((link) => (
+          {/* Quick Links */}
+          <div>
+            <h4 className="mb-4 text-lg font-light text-foreground">Quick Links</h4>
+            <nav className="flex flex-col gap-3">
+              {quickLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm text-muted-foreground transition-colors hover:text-neon-cyan"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="mb-4 text-lg font-light text-foreground">Contact</h4>
+            <div className="flex flex-col gap-3">
               <a
-                key={link.name}
-                href={link.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-neon-cyan"
+                href="mailto:pnethpriya2002@gmail.com"
+                className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-neon-cyan"
               >
-                {link.name}
+                <Mail className="h-4 w-4" />
+                pnethpriya2002@gmail.com
               </a>
-            ))}
-          </nav>
+              <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                <span>PeakIELTS, 264/2, Gorakagahawaththa, Thanthirimulla, Panadura, Sri Lanka</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-8 border-t border-border/30 pt-12 md:flex-row">
-          <p className="text-sm text-muted-foreground">
+        {/* Bottom Section */}
+        <div className="flex flex-col gap-6 border-t border-border/30 pt-8">
+          <div className="text-center text-sm text-muted-foreground">
+            <p className="mb-2">Payments securely processed by Paddle.com</p>
+          </div>
+          
+          <p className="text-center text-sm text-muted-foreground">
             © 2025 PeakIELTS. All rights reserved.
           </p>
-
-          <div className="flex gap-4">
-            {socialLinks.map((social) => {
-              const Icon = social.icon;
-              return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-border/30 text-muted-foreground transition-all duration-300 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-[0_0_20px_rgba(0,229,255,0.4)]"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              );
-            })}
-          </div>
         </div>
       </div>
     </footer>

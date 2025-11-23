@@ -1,194 +1,141 @@
-import { Link } from "react-router-dom";
-
-const sections = [
-  {
-    id: 1,
-    title: "Introduction",
-    paragraphs: [
-      'Welcome to PeakIELTS ("we", "our", "us").',
-      'By accessing or using our website, products, or services, you agree to follow these Terms and Conditions ("Terms"). If you do not agree, please stop using our services immediately.',
-      "PeakIELTS provides AI-powered tools for IELTS speaking practice, feedback, and training. We are not affiliated with Cambridge, British Council, or IDP.",
-    ],
-  },
-  {
-    id: 2,
-    title: "Eligibility",
-    paragraphs: ["You must be:"],
-    bullets: [
-      "At least 5 years old",
-      "Legally able to agree to these Terms",
-      "Using our services for lawful purposes only",
-    ],
-  },
-  {
-    id: 3,
-    title: "Service Description",
-    paragraphs: ["PeakIELTS offers:"],
-    bullets: [
-      "AI-based IELTS speaking simulations",
-      "AI feedback, band estimation, grammar analysis, and coaching",
-      "Access to personalized dashboards",
-      "Subscription-based premium features",
-    ],
-    footer: "We do not guarantee any specific IELTS score.",
-  },
-  {
-    id: 4,
-    title: "Account Registration",
-    paragraphs: [
-      "To use premium features, you must create an account using email and password or Google authentication.",
-      "You agree to:",
-    ],
-    bullets: [
-      "Provide accurate information",
-      "Not share your account with others",
-      "Notify us immediately if unauthorized access occurs",
-    ],
-    footer: "We may suspend accounts that violate these Terms.",
-  },
-  {
-    id: 5,
-    title: "Payments & Subscriptions",
-    paragraphs: [
-      "Payments are processed securely through Paddle, our official payment partner.",
-      "By subscribing, you authorize Paddle to charge your payment method. Subscription renewals occur automatically unless canceled. Refunds follow Paddle's Refund Policy. You are responsible for any fees from your bank or payment provider. If payment fails, access to premium features may be restricted.",
-    ],
-  },
-  {
-    id: 6,
-    title: "No Official IELTS Affiliation",
-    paragraphs: ["PeakIELTS is not affiliated with:"],
-    bullets: ["IELTS", "Cambridge Assessment", "British Council", "IDP Australia"],
-    footer: "Our AI predictions are estimates only and should not be considered official IELTS results.",
-  },
-  {
-    id: 7,
-    title: "Acceptable Use",
-    paragraphs: ["You agree not to:"],
-    bullets: [
-      "Use the service to harm, spam, or harass others",
-      "Reverse-engineer, copy, or resell the platform",
-      "Misuse AI features for unethical purposes",
-      "Attempt to breach security or gain unauthorized access",
-    ],
-    footer: "Violation may result in termination of your account.",
-  },
-  {
-    id: 8,
-    title: "AI Limitations & Disclaimer",
-    paragraphs: [
-      "Our AI provides feedback based on machine-learning models. We do not guarantee accuracy of band prediction, error-free responses, or perfect grammar evaluation. Use AI feedback as support, not as a substitute for human instruction.",
-    ],
-  },
-  {
-    id: 9,
-    title: "Intellectual Property",
-    paragraphs: [
-      "All content, including website design, text, images, AI models, and branding, is owned by PeakIELTS and may not be reproduced without permission.",
-      "You retain ownership of the content you upload (audio recordings, responses), but you give us permission to process it to improve your experience.",
-    ],
-  },
-  {
-    id: 10,
-    title: "Privacy Policy",
-    paragraphs: [
-      "This Privacy Policy explains how PeakIELTS collects, uses, and protects your information when you use our website, products, or services.",
-      "By using PeakIELTS, you agree to this policy. If you do not agree, please discontinue using our services.",
-    ],
-    bullets: [
-      "Information we collect: account details you provide (name, email, password, or Google authentication info); practice data you generate (audio recordings, responses, scores, feedback); usage and device data (browser type, IP address, log data, cookies); payment details handled securely by our payment partner (we do not store full card data).",
-      "How we use information: provide and improve AI speaking practice and feedback; maintain your account, dashboards, and progress tracking; process payments for subscriptions and manage billing; improve product performance, security, and user experience; communicate updates, service notices, and support responses.",
-      "How we share information: we do not sell your personal data; we may share necessary data with trusted providers (e.g., payment processing, hosting, analytics) to operate the service, under appropriate safeguards.",
-      "Data security and retention: we use reasonable technical and organizational measures to protect your data; we retain data only as long as needed for the purposes outlined here or as required by law.",
-      "Your choices: you may update or delete your account information; you may request deletion of your practice data, subject to legal or operational requirements; you can manage cookie preferences in your browser settings.",
-      "Children: PeakIELTS is intended for users at least 5 years old. If we learn we have collected data from a younger child without consent, we will delete it.",
-      "Changes to this policy: we may update this Privacy Policy. Continued use after updates means you accept the revised policy.",
-      "Contact: For privacy questions, email pnethpriya2002@gmail.com.",
-    ],
-  },
-  {
-    id: 11,
-    title: "Termination",
-    paragraphs: [
-      "We may suspend or terminate your account if you violate these Terms, we detect fraudulent behavior, or it is required by law.",
-      "You may stop using the service at any time by deleting your account.",
-    ],
-  },
-  {
-    id: 12,
-    title: "Limitation of Liability",
-    paragraphs: ["We are not responsible for:"],
-    bullets: ["Exam failure", "Data loss", "Service interruptions", "Inaccurate AI predictions"],
-    footer: "Use the platform at your own risk.",
-  },
-  {
-    id: 13,
-    title: "Changes to Terms",
-    paragraphs: [
-      "We may update these Terms at any time. Continued use means you accept the updated version.",
-    ],
-  },
-  {
-    id: 14,
-    title: "Contact Information",
-    paragraphs: ["If you have questions, contact us at:"],
-    bullets: ["your support email here", "pnethpriya2002@gmail.com"],
-  },
-];
+import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 
 const Terms = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-        <div className="mb-8 flex items-center justify-between">
-          <Link
-            to="/"
-            className="text-sm text-muted-foreground transition-colors hover:text-neon-cyan"
+    <div className="min-h-screen w-full overflow-x-hidden bg-background">
+      <div className="relative px-4 py-24 md:py-32">
+        <div className="mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
           >
-            Back to home
-          </Link>
-          <div className="text-sm text-muted-foreground">Template for your IELTS AI tutor website</div>
-        </div>
+            <h1 className="mb-6 text-5xl font-thin tracking-tight text-foreground md:text-6xl">
+              Terms &{" "}
+              <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
+                Conditions
+              </span>
+            </h1>
+            <p className="text-muted-foreground">
+              Effective Date: February 2025
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              Welcome to PeakIELTS. By accessing our website and services, you agree to the following terms.
+            </p>
+          </motion.div>
 
-        <div className="mb-10">
-          <h1 className="text-4xl font-light tracking-tight md:text-5xl">Terms &amp; Conditions</h1>
-          <p className="mt-3 max-w-2xl text-muted-foreground">
-            Please read these Terms and Conditions carefully before using PeakIELTS. By accessing or
-            using our services, you agree to be bound by these Terms.
-          </p>
-        </div>
-
-        <div className="space-y-6">
-          {sections.map((section) => (
-            <section
-              key={section.id}
-              className="rounded-2xl border border-border/30 bg-card/40 p-6 md:p-8"
-            >
-              <div className="mb-3 flex items-baseline gap-3">
-                <span className="text-sm font-semibold text-neon-cyan">
-                  {section.id.toString().padStart(2, "0")}
-                </span>
-                <h2 className="text-xl font-semibold text-foreground/90 md:text-2xl">
-                  {section.title}
-                </h2>
-              </div>
-              <div className="space-y-4 text-muted-foreground">
-                {section.paragraphs?.map((text, idx) => (
-                  <p key={idx}>{text}</p>
-                ))}
-                {section.bullets && section.bullets.length > 0 && (
-                  <ul className="ml-5 list-disc space-y-2">
-                    {section.bullets.map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
-                  </ul>
-                )}
-                {section.footer && <p className="text-sm text-foreground/80">{section.footer}</p>}
-              </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="glass-card rounded-3xl p-8 md:p-12 space-y-8"
+          >
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">1. Service Overview</h2>
+              <p className="text-muted-foreground">
+                PeakIELTS offers AI-powered IELTS Speaking practice, automated scoring, analytics, and feedback via subscription.
+              </p>
             </section>
-          ))}
+
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">2. Accounts</h2>
+              <p className="mb-3 text-muted-foreground">To use our service you must:</p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                <li>Create an account or login with Google</li>
+                <li>Provide accurate details</li>
+                <li>Be at least 13 years old</li>
+                <li>Not share your account with others</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">3. Subscription & Billing</h2>
+              <p className="mb-3 text-muted-foreground">
+                By subscribing, you authorize Paddle.com to charge you monthly until cancellation.
+              </p>
+              <p className="mb-3 text-muted-foreground">
+                Prices and plans are listed at:{" "}
+                <a href="/pricing" className="text-neon-cyan hover:underline">
+                  peakielts.com/pricing
+                </a>
+              </p>
+              <p className="text-muted-foreground">
+                You may cancel anytime via your account or Paddle's billing portal.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">4. Refund Policy</h2>
+              <p className="text-muted-foreground">
+                Our refund details are available at:{" "}
+                <a href="/refund" className="text-neon-cyan hover:underline">
+                  peakielts.com/refund
+                </a>
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">5. Merchant of Record</h2>
+              <p className="mb-3 text-muted-foreground">
+                All payments are processed by Paddle.com, our Merchant of Record. Paddle manages all taxes, billing, and invoicing.
+              </p>
+              <p className="text-muted-foreground">
+                PeakIELTS does not store payment card details.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">6. Acceptable Use Policy</h2>
+              <p className="mb-3 text-muted-foreground">You agree not to:</p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                <li>Engage in unlawful activities</li>
+                <li>Attempt to reverse engineer or misuse the service</li>
+                <li>Abuse or overload the AI system</li>
+                <li>Upload harmful or offensive content</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">7. Intellectual Property</h2>
+              <p className="text-muted-foreground">
+                All content, branding, and software belong to PeakIELTS. Reproduction or distribution without permission is prohibited.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">8. Limitation of Liability</h2>
+              <p className="mb-3 text-muted-foreground">PeakIELTS is not liable for:</p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                <li>IELTS exam outcomes</li>
+                <li>AI scoring inaccuracies</li>
+                <li>Technical outages</li>
+                <li>Data loss or service interruptions</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">9. Changes to Terms</h2>
+              <p className="text-muted-foreground">
+                We may update these Terms at any time. Continued use means acceptance of updated Terms.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-2xl font-light text-foreground">10. Contact</h2>
+              <p className="text-muted-foreground">
+                📧{" "}
+                <a href="mailto:pnethpriya2002@gmail.com" className="text-neon-cyan hover:underline">
+                  pnethpriya2002@gmail.com
+                </a>
+              </p>
+              <p className="text-muted-foreground">📍 Sri Lanka</p>
+            </section>
+          </motion.div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
