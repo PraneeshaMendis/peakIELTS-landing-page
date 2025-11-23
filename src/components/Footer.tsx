@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="mb-12 flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="text-center md:text-left">
             <h3 className="mb-2 text-2xl font-thin text-foreground">
-              RemoraAI <span className="text-neon-cyan">IELTS</span>
+              Peak<span className="text-neon-cyan">IELTS</span>
             </h3>
             <p className="text-sm text-muted-foreground">
               AI-Powered IELTS Speaking Tutor
@@ -46,7 +46,7 @@ const Footer = () => {
 
         <div className="flex flex-col items-center justify-between gap-8 border-t border-border/30 pt-12 md:flex-row">
           <p className="text-sm text-muted-foreground">
-            © 2025 RemoraAI IELTS. All rights reserved.
+            © 2025 PeakIELTS. All rights reserved.
           </p>
 
           <div className="flex gap-4">

@@ -29,9 +29,9 @@ const HeroSection = () => {
         >
           <span className="block">
             <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
-              AI-Powered IELTS Speaking Tutor by
+              IELTS Speaking Tutor by
             </span>{" "}
-            <span className="font-semibold text-white">REMORA</span>
+            <span className="font-semibold text-white">PeakIELTS</span>
           </span>
         </motion.h1>
 

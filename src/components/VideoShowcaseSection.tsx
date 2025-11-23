@@ -61,7 +61,7 @@ const VideoShowcaseSection = () => {
           <h2 className="text-4xl font-thin tracking-tight text-foreground md:text-5xl lg:text-6xl">
             See{" "}
             <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
-              RemoraAI IELTS
+              PeakIELTS
             </span>{" "}
             in Action
           </h2>

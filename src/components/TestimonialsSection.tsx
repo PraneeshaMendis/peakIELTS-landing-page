@@ -7,7 +7,7 @@ const testimonials = [
     name: "Sarah Chen",
     role: "Student, Malaysia",
     avatar: "SC",
-    quote: "RemoraAI IELTS helped me increase from Band 5 to Band 7 in 3 weeks. The AI feedback is incredibly accurate!",
+    quote: "PeakIELTS helped me increase from Band 5 to Band 7 in 3 weeks. The AI feedback is incredibly accurate!",
   },
   {
     name: "Ahmed Hassan",
