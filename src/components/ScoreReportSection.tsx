@@ -7,10 +7,10 @@ const ScoreReportSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const categories = [
-    { name: "Fluency & Coherence", score: 7.5, max: 9 },
-    { name: "Lexical Resource", score: 7.0, max: 9 },
-    { name: "Grammatical Range", score: 6.5, max: 9 },
-    { name: "Pronunciation", score: 7.0, max: 9 },
+    { name: "Fluency & Coherence", score: 8.0, max: 9 },
+    { name: "Lexical Resource", score: 8.0, max: 9 },
+    { name: "Grammatical Range & Accuracy", score: 7.5, max: 9 },
+    { name: "Pronunciation", score: 8.0, max: 9 },
   ];
 
   return (
@@ -42,7 +42,7 @@ const ScoreReportSection = () => {
               Overall Band Score
             </div>
             <div className="neon-glow-cyan text-8xl font-thin text-neon-cyan">
-              7.0
+              8.0
             </div>
           </div>
 

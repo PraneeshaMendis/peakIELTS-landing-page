@@ -90,9 +90,20 @@ const sections = [
   },
   {
     id: 10,
-    title: "Privacy",
+    title: "Privacy Policy",
     paragraphs: [
-      "Your data is handled according to our Privacy Policy (create a separate page). We do not sell your personal information.",
+      "This Privacy Policy explains how PeakIELTS collects, uses, and protects your information when you use our website, products, or services.",
+      "By using PeakIELTS, you agree to this policy. If you do not agree, please discontinue using our services.",
+    ],
+    bullets: [
+      "Information we collect: account details you provide (name, email, password, or Google authentication info); practice data you generate (audio recordings, responses, scores, feedback); usage and device data (browser type, IP address, log data, cookies); payment details handled securely by our payment partner (we do not store full card data).",
+      "How we use information: provide and improve AI speaking practice and feedback; maintain your account, dashboards, and progress tracking; process payments for subscriptions and manage billing; improve product performance, security, and user experience; communicate updates, service notices, and support responses.",
+      "How we share information: we do not sell your personal data; we may share necessary data with trusted providers (e.g., payment processing, hosting, analytics) to operate the service, under appropriate safeguards.",
+      "Data security and retention: we use reasonable technical and organizational measures to protect your data; we retain data only as long as needed for the purposes outlined here or as required by law.",
+      "Your choices: you may update or delete your account information; you may request deletion of your practice data, subject to legal or operational requirements; you can manage cookie preferences in your browser settings.",
+      "Children: PeakIELTS is intended for users at least 5 years old. If we learn we have collected data from a younger child without consent, we will delete it.",
+      "Changes to this policy: we may update this Privacy Policy. Continued use after updates means you accept the revised policy.",
+      "Contact: For privacy questions, email pnethpriya2002@gmail.com.",
     ],
   },
   {
